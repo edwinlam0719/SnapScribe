@@ -2,7 +2,7 @@
 An Image to Text scanner implemented in C++ using the Qt GUI framework. 
 The application utilizes the OpenCV library for image processing and Tesseract for text recognition.
 
-<img width="799" alt="ScreenshotDemo" src="https://github.com/edwinlam0719/SnapText/assets/54792120/262c1fdd-341e-4026-a67e-d15ec2f0d4d8">
+<img width="802" alt="ScreenshotDemo" src="https://github.com/edwinlam0719/SnapText/assets/54792120/c2fa3fb9-ef7d-44b4-9020-56d5161fd50e">
 
 
 ## Features
