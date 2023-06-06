@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QWidget" name="leftMenuContainer" native="true">
+      <widget class="QWidget" name="leftMenuSubContainer" native="true">
+       <property name="geometry">
+        <rect>
+         <x>-8</x>
+         <y>-7</y>
+         <width>181</width>
+         <height>571</height>
+        </rect>
+       </property>
+       <widget class="QFrame" name="frame">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QPushButton" name="uploadImageButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Upload Image</string>
+           </property>
+           <property name="icon">
+            <iconset theme="audio-input-microphone">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>18</width>
+             <height>18</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="rightContainer">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>-10</y>
+         <width>271</width>
+         <height>571</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>576</width>
+         <height>576</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QWidget" name="middleContainer" native="true">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>-20</y>
+         <width>401</width>
+         <height>581</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
