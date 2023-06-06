@@ -15,5 +15,7 @@ The application utilizes the OpenCV library for image processing and Tesseract f
 - OpenCV Library
 - Tesseract OCR Engine
 
-
+## Installation
+Go to the releases page and download the latest one.
+Extract and run the application file.
 
