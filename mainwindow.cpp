@@ -27,30 +27,24 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     std::cout << "OpenCV version: " << CV_VERSION << std::endl;
 
-    // Find the rightContainer widget
     QWidget* rightContainer = findChild<QWidget*>("rightContainer");
     if (rightContainer != nullptr)
     {
-        // Create a QScrollArea to enable scrolling
         QScrollArea* scrollArea = new QScrollArea(this);
         scrollArea->setWidgetResizable(true);
 
-        // Create a special box widget with defined background (QLabel)
         QLabel* textContainer = new QLabel(scrollArea);
         textContainer->setObjectName("textContainer");
         textContainer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         textContainer->setAlignment(Qt::AlignCenter);
-        textContainer->setStyleSheet("QLabel#textContainer { background-color: #f0f0f0; border: 2px solid #333333; color: black; }");
-        textContainer->setWordWrap(true); // Enable word wrapping
+        textContainer->setStyleSheet("QLabel#textContainer { background-color: #FFFFFF; border: 2px solid #333333; color: black; }");
+        textContainer->setWordWrap(true);
 
-        // Set the QLabel as the widget for the QScrollArea
         scrollArea->setWidget(textContainer);
 
-        // Create a layout for the rightContainer
         QVBoxLayout* layout = new QVBoxLayout(rightContainer);
         layout->addWidget(scrollArea);
 
-        // Set the layout on the rightContainer widget
         rightContainer->setLayout(layout);
     }
     else
@@ -58,24 +52,18 @@ MainWindow::MainWindow(QWidget *parent)
         qDebug() << "Error: Unable to find the rightContainer widget.";
     }
 
-    // Find the middleContainer widget
     QWidget* middleContainer = findChild<QWidget*>("middleContainer");
     if (middleContainer != nullptr)
     {
-        // Set the background color of the middleContainer
-        middleContainer->setStyleSheet("background-color: #808080;");
+        middleContainer->setStyleSheet("background-color: #FFFFFF;");
 
-        // Create a QLabel to display the uploaded image
         QLabel* imageLabel = new QLabel(middleContainer);
         imageLabel->setObjectName("imageLabel");
         imageLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
         imageLabel->setScaledContents(true); // Scale the image to fit the label
-
-        // Set the QLabel as the widget for the middleContainer
         QVBoxLayout* layout = new QVBoxLayout(middleContainer);
         layout->addWidget(imageLabel);
 
-        // Set the layout on the middleContainer widget
         middleContainer->setLayout(layout);
     }
     else
@@ -116,19 +104,15 @@ void MainWindow::onUploadImageButtonClicked()
         std::string ocrResult;
         performOCR(image, tess, ocrResult);
 
-        // Find the textContainer widget
         QLabel* textContainer = findChild<QLabel*>("textContainer");
         if (textContainer != nullptr)
         {
-            // Display the OCR result inside the textContainer
             textContainer->setText(QString::fromStdString(ocrResult));
         }
 
-        // Find the imageLabel widget
         QLabel* imageLabel = findChild<QLabel*>("imageLabel");
         if (imageLabel != nullptr)
         {
-            // Display the uploaded image
             QImage qImage(image.data, image.cols, image.rows, static_cast<int>(image.step), QImage::Format_RGB888);
             imageLabel->setPixmap(QPixmap::fromImage(qImage));
         }

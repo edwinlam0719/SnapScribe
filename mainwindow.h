@@ -18,15 +18,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-
-
 private slots:
     void onUploadImageButtonClicked();
 
 private:
     Ui::MainWindow *ui;
     QString imagePath;
-    QLabel* imageLabel; // QLabel widget to display the uploaded image
+    QLabel* imageLabel;
 };
 
 #endif // MAINWINDOW_H
