@@ -1,4 +1,4 @@
-# SnapText: Image to Text Scanner
+# SnapScribe: Image to Text Scanner
 An Image to Text scanner implemented in C++ using the Qt GUI framework. 
 The application utilizes the OpenCV library for image processing and Tesseract for text recognition.
 
